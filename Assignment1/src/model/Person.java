@@ -11,7 +11,7 @@ package model;
 public class Person {
     private String name;
     private String age;
-    private String gender;
+    private String id;
     private String phone;
     private String email;
 
@@ -23,8 +23,8 @@ public class Person {
     public String getAge() { return age; }
     public void setAge(String age) { this.age = age; }
 
-    public String getGender() { return gender; }
-    public void setGender(String gender) { this.gender = gender; }
+    public String getId() { return id; }
+    public void setId(String gender) { this.id = id; }
 
     public String getPhone() { return phone; }
     public void setPhone(String phone) { this.phone = phone; }

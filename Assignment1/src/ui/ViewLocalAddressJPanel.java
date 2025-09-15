@@ -3,18 +3,34 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package ui;
+import model.LocalAddress;
 
 /**
  *
  * @author vedanarayananshrirangesh
  */
 public class ViewLocalAddressJPanel extends javax.swing.JPanel {
+    LocalAddress localAddress;
 
     /**
      * Creates new form ViewLocalAddressJPanel
      */
-    public ViewLocalAddressJPanel() {
+    public ViewLocalAddressJPanel(LocalAddress localAddress) {
+         this.localAddress = localAddress;
         initComponents();
+        display();
+        
+    }
+    private void display() {
+        fieldLocalStreett.setText(localAddress.getStreetName());
+        fieldLocalUnitt.setText(localAddress.getUnitNum());
+        fieldLocalCityt.setText(localAddress.getCity());
+        fieldLocalZipCodet.setText(localAddress.getZipCode());
+
+        fieldLocalStreett.setEditable(false);
+        fieldLocalUnitt.setEditable(false);
+        fieldLocalCityt.setEditable(false);
+        fieldLocalZipCodet.setEditable(false);
     }
 
     /**
@@ -26,19 +42,97 @@ public class ViewLocalAddressJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        fieldLocalStreet = new javax.swing.JLabel();
+        fieldLocalUnit = new javax.swing.JLabel();
+        fieldLocalCity = new javax.swing.JLabel();
+        fieldLocalZipCode = new javax.swing.JLabel();
+        fieldLocalStreett = new javax.swing.JTextField();
+        fieldLocalUnitt = new javax.swing.JTextField();
+        fieldLocalCityt = new javax.swing.JTextField();
+        fieldLocalZipCodet = new javax.swing.JTextField();
+
+        fieldLocalStreet.setText("Street ");
+
+        fieldLocalUnit.setText("Unit Number");
+
+        fieldLocalCity.setText("City");
+
+        fieldLocalZipCode.setText("Zip Code");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(fieldLocalZipCode)
+                    .addComponent(fieldLocalCity)
+                    .addComponent(fieldLocalUnit)
+                    .addComponent(fieldLocalStreet))
+                .addGap(157, 157, 157)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(fieldLocalStreett, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldLocalUnitt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldLocalCityt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldLocalZipCodet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(185, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(fieldLocalStreet)
+                    .addComponent(fieldLocalStreett, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldLocalUnit)
+                    .addComponent(fieldLocalUnitt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldLocalCity)
+                    .addComponent(fieldLocalCityt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldLocalZipCode)
+                    .addComponent(fieldLocalZipCodet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(230, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 480, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel fieldLocalCity;
+    private javax.swing.JTextField fieldLocalCityt;
+    private javax.swing.JLabel fieldLocalStreet;
+    private javax.swing.JTextField fieldLocalStreett;
+    private javax.swing.JLabel fieldLocalUnit;
+    private javax.swing.JTextField fieldLocalUnitt;
+    private javax.swing.JLabel fieldLocalZipCode;
+    private javax.swing.JTextField fieldLocalZipCodet;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

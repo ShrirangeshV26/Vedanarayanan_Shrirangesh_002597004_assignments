@@ -3,18 +3,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package ui;
+import javax.swing.JOptionPane;
+import model.HomeAddress;
 
 /**
  *
  * @author vedanarayananshrirangesh
  */
 public class CreateHomeAddressJPanel extends javax.swing.JPanel {
+     HomeAddress homeAddress;
 
     /**
      * Creates new form CreateHomeAddressJPanel
      */
-    public CreateHomeAddressJPanel() {
-        initComponents();
+    public CreateHomeAddressJPanel(HomeAddress homeAddress) {
+                this.homeAddress = homeAddress;
+                initComponents();
+
+        
+        
     }
 
     /**
@@ -26,19 +33,111 @@ public class CreateHomeAddressJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        fieldHomeStreet = new javax.swing.JLabel();
+        fieldHomeUnit = new javax.swing.JLabel();
+        fieldHomeCity = new javax.swing.JLabel();
+        fieldHomeZipCode = new javax.swing.JLabel();
+        fieldHomeStreett = new javax.swing.JTextField();
+        fieldHomeUnitt = new javax.swing.JTextField();
+        fieldHomeCityt = new javax.swing.JTextField();
+        fieldHomeZipCodet = new javax.swing.JTextField();
+        btnSave = new javax.swing.JButton();
+
+        fieldHomeStreet.setText("Street");
+
+        fieldHomeUnit.setText("Unit Number");
+
+        fieldHomeCity.setText("City");
+
+        fieldHomeZipCode.setText("Zip Code");
+
+        fieldHomeStreett.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldHomeStreettActionPerformed(evt);
+            }
+        });
+
+        btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fieldHomeStreet)
+                            .addComponent(fieldHomeUnit)
+                            .addComponent(fieldHomeZipCode)
+                            .addComponent(fieldHomeCity))
+                        .addGap(136, 136, 136)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(fieldHomeStreett, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                            .addComponent(fieldHomeUnitt)
+                            .addComponent(fieldHomeCityt)
+                            .addComponent(fieldHomeZipCodet)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(117, 117, 117)
+                        .addComponent(btnSave)))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(fieldHomeStreet)
+                    .addComponent(fieldHomeStreett, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldHomeUnit)
+                    .addComponent(fieldHomeUnitt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldHomeCity)
+                    .addComponent(fieldHomeCityt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldHomeZipCode)
+                    .addComponent(fieldHomeZipCodet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(76, 76, 76)
+                .addComponent(btnSave)
+                .addContainerGap(127, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void fieldHomeStreettActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldHomeStreettActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldHomeStreettActionPerformed
+
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        // TODO add your handling code here:
+        homeAddress.setStreetName(fieldHomeStreett.getText());
+        homeAddress.setUnitNum(fieldHomeUnitt.getText());
+        homeAddress.setCity(fieldHomeCityt.getText());
+        homeAddress.setZipCode(fieldHomeZipCodet.getText());
+
+        JOptionPane.showMessageDialog(this, "Home Address saved!");
+
+    }//GEN-LAST:event_btnSaveActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSave;
+    private javax.swing.JLabel fieldHomeCity;
+    private javax.swing.JTextField fieldHomeCityt;
+    private javax.swing.JLabel fieldHomeStreet;
+    private javax.swing.JTextField fieldHomeStreett;
+    private javax.swing.JLabel fieldHomeUnit;
+    private javax.swing.JTextField fieldHomeUnitt;
+    private javax.swing.JLabel fieldHomeZipCode;
+    private javax.swing.JTextField fieldHomeZipCodet;
     // End of variables declaration//GEN-END:variables
 }

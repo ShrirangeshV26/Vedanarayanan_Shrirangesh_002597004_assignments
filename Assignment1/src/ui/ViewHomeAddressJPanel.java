@@ -3,20 +3,34 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package ui;
-
+import model.HomeAddress;
 /**
  *
  * @author vedanarayananshrirangesh
  */
 public class ViewHomeAddressJPanel extends javax.swing.JPanel {
+    HomeAddress homeAddress;
 
     /**
      * Creates new form ViewHomeAddressJPanel
      */
-    public ViewHomeAddressJPanel() {
+    public ViewHomeAddressJPanel(HomeAddress homeAddress) {
+        this.homeAddress = homeAddress;
         initComponents();
+        display();
+        
     }
+private void display() {
+        fieldHomeStreett.setText(homeAddress.getStreetName());
+        fieldHomeUnitt.setText(homeAddress.getUnitNum());
+        fieldHomeCityt.setText(homeAddress.getCity());
+        fieldHomeZipCodet.setText(homeAddress.getZipCode());
 
+        fieldHomeStreett.setEditable(false);
+        fieldHomeUnitt.setEditable(false);
+        fieldHomeCityt.setEditable(false);
+       fieldHomeZipCodet.setEditable(false);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,19 +40,97 @@ public class ViewHomeAddressJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        fieldHomeStreet = new javax.swing.JLabel();
+        fieldHomeUnit = new javax.swing.JLabel();
+        fieldHomeCity = new javax.swing.JLabel();
+        fieldHomeZipCode = new javax.swing.JLabel();
+        fieldHomeStreett = new javax.swing.JTextField();
+        fieldHomeUnitt = new javax.swing.JTextField();
+        fieldHomeCityt = new javax.swing.JTextField();
+        fieldHomeZipCodet = new javax.swing.JTextField();
+
+        fieldHomeStreet.setText("Street");
+
+        fieldHomeUnit.setText("Unit Number");
+
+        fieldHomeCity.setText("City");
+
+        fieldHomeZipCode.setText("Zip Code");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldHomeStreet)
+                    .addComponent(fieldHomeUnit)
+                    .addComponent(fieldHomeZipCode)
+                    .addComponent(fieldHomeCity))
+                .addGap(136, 136, 136)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldHomeCityt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldHomeZipCodet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldHomeUnitt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldHomeStreett, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(200, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(fieldHomeStreet)
+                    .addComponent(fieldHomeStreett, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldHomeUnit)
+                    .addComponent(fieldHomeUnitt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldHomeCity)
+                    .addComponent(fieldHomeCityt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldHomeZipCode)
+                    .addComponent(fieldHomeZipCodet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(226, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 501, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 480, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel fieldHomeCity;
+    private javax.swing.JTextField fieldHomeCityt;
+    private javax.swing.JLabel fieldHomeStreet;
+    private javax.swing.JTextField fieldHomeStreett;
+    private javax.swing.JLabel fieldHomeUnit;
+    private javax.swing.JTextField fieldHomeUnitt;
+    private javax.swing.JLabel fieldHomeZipCode;
+    private javax.swing.JTextField fieldHomeZipCodet;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -3,12 +3,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ui;
+import model.Person;
+import model.HomeAddress;
+import model.LocalAddress;
+import model.BankAccount;
 
 /**
  *
  * @author vedanarayananshrirangesh
  */
 public class MainJFrame extends javax.swing.JFrame {
+    Person person = new Person();
+    HomeAddress homeAddress = new HomeAddress();
+    LocalAddress localAddress = new LocalAddress();
+    BankAccount bankAccount = new BankAccount();
 
     /**
      * Creates new form MainJFrame
@@ -28,19 +36,114 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jSplitPane1 = new javax.swing.JSplitPane();
         panelButtons = new javax.swing.JPanel();
+        btnCreatePerson = new javax.swing.JButton();
+        btnViewPerson = new javax.swing.JButton();
+        btnCreateHomeAddress = new javax.swing.JButton();
+        btnViewHomeAddress = new javax.swing.JButton();
+        btnCreateLocalAddress = new javax.swing.JButton();
+        btnViewLocalAddress = new javax.swing.JButton();
+        btnCreateBankAccount = new javax.swing.JButton();
+        btnViewBankAccount = new javax.swing.JButton();
         panelDisplay = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btnCreatePerson.setText("Create Person");
+        btnCreatePerson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreatePersonActionPerformed(evt);
+            }
+        });
+
+        btnViewPerson.setText("View Person");
+        btnViewPerson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewPersonActionPerformed(evt);
+            }
+        });
+
+        btnCreateHomeAddress.setText("Create Home Address");
+        btnCreateHomeAddress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateHomeAddressActionPerformed(evt);
+            }
+        });
+
+        btnViewHomeAddress.setText("View Home Address");
+        btnViewHomeAddress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewHomeAddressActionPerformed(evt);
+            }
+        });
+
+        btnCreateLocalAddress.setText("Create Local Address");
+        btnCreateLocalAddress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateLocalAddressActionPerformed(evt);
+            }
+        });
+
+        btnViewLocalAddress.setText("View Local Address");
+        btnViewLocalAddress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewLocalAddressActionPerformed(evt);
+            }
+        });
+
+        btnCreateBankAccount.setText("Create Bank Account");
+        btnCreateBankAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateBankAccountActionPerformed(evt);
+            }
+        });
+
+        btnViewBankAccount.setText("View Bank Account");
+        btnViewBankAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewBankAccountActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelButtonsLayout = new javax.swing.GroupLayout(panelButtons);
         panelButtons.setLayout(panelButtonsLayout);
         panelButtonsLayout.setHorizontalGroup(
             panelButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(panelButtonsLayout.createSequentialGroup()
+                .addGroup(panelButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCreatePerson)
+                    .addComponent(btnCreateHomeAddress)
+                    .addComponent(btnViewHomeAddress)
+                    .addComponent(btnViewPerson))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(panelButtonsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCreateLocalAddress)
+                    .addComponent(btnViewLocalAddress)
+                    .addComponent(btnCreateBankAccount)
+                    .addComponent(btnViewBankAccount))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelButtonsLayout.setVerticalGroup(
             panelButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 480, Short.MAX_VALUE)
+            .addGroup(panelButtonsLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(btnCreatePerson)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnViewPerson)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCreateHomeAddress)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnViewHomeAddress)
+                .addGap(33, 33, 33)
+                .addComponent(btnCreateLocalAddress)
+                .addGap(18, 18, 18)
+                .addComponent(btnViewLocalAddress)
+                .addGap(33, 33, 33)
+                .addComponent(btnCreateBankAccount)
+                .addGap(18, 18, 18)
+                .addComponent(btnViewBankAccount)
+                .addContainerGap(143, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(panelButtons);
@@ -62,6 +165,56 @@ public class MainJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCreatePersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatePersonActionPerformed
+        // TODO add your handling code here:
+         CreatePersonJPanel panel = new CreatePersonJPanel(person);
+        jSplitPane1.setRightComponent(panel);
+    }//GEN-LAST:event_btnCreatePersonActionPerformed
+
+    private void btnViewPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPersonActionPerformed
+        // TODO add your handling code here:
+          ViewPersonJPane panel = new ViewPersonJPane(person);
+          
+          jSplitPane1.setRightComponent(panel);
+    }//GEN-LAST:event_btnViewPersonActionPerformed
+
+    private void btnCreateHomeAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateHomeAddressActionPerformed
+        // TODO add your handling code here:
+         CreateHomeAddressJPanel panel = new CreateHomeAddressJPanel(homeAddress);
+        jSplitPane1.setRightComponent(panel);
+    }//GEN-LAST:event_btnCreateHomeAddressActionPerformed
+
+    private void btnViewHomeAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHomeAddressActionPerformed
+        // TODO add your handling code here:
+         ViewHomeAddressJPanel panel = new ViewHomeAddressJPanel(homeAddress);
+        jSplitPane1.setRightComponent(panel);
+    }//GEN-LAST:event_btnViewHomeAddressActionPerformed
+
+    private void btnCreateLocalAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateLocalAddressActionPerformed
+        // TODO add your handling code here:
+         CreateLocalAddressJPanel panel = new CreateLocalAddressJPanel(localAddress);
+        jSplitPane1.setRightComponent(panel);
+    }//GEN-LAST:event_btnCreateLocalAddressActionPerformed
+
+    private void btnViewLocalAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewLocalAddressActionPerformed
+        // TODO add your handling code here:
+        ViewLocalAddressJPanel panel = new ViewLocalAddressJPanel(localAddress);
+        jSplitPane1.setRightComponent(panel);
+    }//GEN-LAST:event_btnViewLocalAddressActionPerformed
+
+    private void btnCreateBankAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateBankAccountActionPerformed
+        // TODO add your handling code here:
+       CreateBankAccountJPanel panel = new CreateBankAccountJPanel(bankAccount);
+        jSplitPane1.setRightComponent(panel);
+
+    }//GEN-LAST:event_btnCreateBankAccountActionPerformed
+
+    private void btnViewBankAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewBankAccountActionPerformed
+        // TODO add your handling code here:
+         ViewBankAccountJPanel panel = new ViewBankAccountJPanel(bankAccount);
+        jSplitPane1.setRightComponent(panel);
+    }//GEN-LAST:event_btnViewBankAccountActionPerformed
 
     /**
      * @param args the command line arguments
@@ -99,6 +252,14 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCreateBankAccount;
+    private javax.swing.JButton btnCreateHomeAddress;
+    private javax.swing.JButton btnCreateLocalAddress;
+    private javax.swing.JButton btnCreatePerson;
+    private javax.swing.JButton btnViewBankAccount;
+    private javax.swing.JButton btnViewHomeAddress;
+    private javax.swing.JButton btnViewLocalAddress;
+    private javax.swing.JButton btnViewPerson;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JPanel panelButtons;
     private javax.swing.JPanel panelDisplay;
