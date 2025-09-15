@@ -40,6 +40,8 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
         fieldLocalZipCodet = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(204, 255, 204));
+
         fieldLocalStreet.setText("Street ");
 
         fieldLocalUnit.setText("Unit Number");

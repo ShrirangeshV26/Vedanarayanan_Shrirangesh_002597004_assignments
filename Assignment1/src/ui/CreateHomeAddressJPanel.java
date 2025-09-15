@@ -43,6 +43,8 @@ public class CreateHomeAddressJPanel extends javax.swing.JPanel {
         fieldHomeZipCodet = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 204, 204));
+
         fieldHomeStreet.setText("Street");
 
         fieldHomeUnit.setText("Unit Number");

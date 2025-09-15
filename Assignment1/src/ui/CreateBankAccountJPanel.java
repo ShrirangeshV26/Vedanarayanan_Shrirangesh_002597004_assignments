@@ -42,6 +42,8 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
         fieldAccountBalancet = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(51, 255, 51));
+
         fieldBankName.setText("Bank Name");
 
         fieldAccountNum.setText("Account Number");

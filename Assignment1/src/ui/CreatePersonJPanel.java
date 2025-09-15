@@ -48,6 +48,8 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         fieldId = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 204, 204));
+
         fieldPersonName.setText("Name");
 
         fieldPersonAge.setText("Age");
