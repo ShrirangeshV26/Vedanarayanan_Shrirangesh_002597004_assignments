@@ -78,7 +78,7 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
                             .addComponent(fieldAccountType)
                             .addComponent(fieldRoutingNum)
                             .addComponent(fieldAccountNum))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(fieldAccountNumbert, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                             .addComponent(fieldRoutingNumbert, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -86,7 +86,7 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
                             .addComponent(fieldAccountBalancet, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(fieldBankName)
-                        .addGap(169, 169, 169)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(fieldBankNamet, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(115, 115, 115))
         );

@@ -34,7 +34,7 @@
         <Container class="javax.swing.JPanel" name="panelButtons">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="33" red="cc" type="rgb"/>
+              <Color blue="99" green="cc" red="ff" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>
@@ -50,20 +50,14 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="btnCreatePerson" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btnCreateHomeAddress" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnViewHomeAddress" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btnViewPerson" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="btnViewHomeAddress" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btnCreateLocalAddress" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btnViewLocalAddress" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnCreateBankAccount" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btnViewBankAccount" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnCreateBankAccount" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="9" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

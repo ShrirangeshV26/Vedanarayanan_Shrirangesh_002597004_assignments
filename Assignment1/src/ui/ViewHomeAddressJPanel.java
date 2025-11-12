@@ -29,7 +29,7 @@ private void display() {
         fieldHomeStreett.setEditable(false);
         fieldHomeUnitt.setEditable(false);
         fieldHomeCityt.setEditable(false);
-       fieldHomeZipCodet.setEditable(false);
+        fieldHomeZipCodet.setEditable(false);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -50,6 +50,8 @@ private void display() {
         fieldHomeCityt = new javax.swing.JTextField();
         fieldHomeZipCodet = new javax.swing.JTextField();
 
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+
         fieldHomeStreet.setText("Street");
 
         fieldHomeUnit.setText("Unit Number");
@@ -69,12 +71,12 @@ private void display() {
                     .addComponent(fieldHomeUnit)
                     .addComponent(fieldHomeZipCode)
                     .addComponent(fieldHomeCity))
-                .addGap(136, 136, 136)
+                .addGap(88, 88, 88)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldHomeCityt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fieldHomeZipCodet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fieldHomeUnitt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fieldHomeStreett, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldHomeStreett, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldHomeCityt, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldHomeUnitt, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldHomeZipCodet, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(200, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(

@@ -112,6 +112,8 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
         localAddress.setUnitNum(fieldLocalUnitt.getText());
         localAddress.setCity(fieldLocalCityt.getText());
         localAddress.setZipCode(fieldLocalZipCodet.getText());
+        
+        JOptionPane.showMessageDialog(this, "Home Address saved!");
        
     }//GEN-LAST:event_btnSaveActionPerformed
 

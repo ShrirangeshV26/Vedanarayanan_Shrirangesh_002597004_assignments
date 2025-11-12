@@ -41,6 +41,11 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -53,12 +58,12 @@
                       <Component id="fieldLocalUnit" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Component id="fieldLocalStreet" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="fieldLocalStreett" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="fieldLocalUnitt" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="fieldLocalCityt" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="fieldLocalZipCodet" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="fieldLocalStreett" pref="100" max="32767" attributes="0"/>
+                      <Component id="fieldLocalUnitt" alignment="1" max="32767" attributes="0"/>
+                      <Component id="fieldLocalCityt" alignment="1" max="32767" attributes="0"/>
+                      <Component id="fieldLocalZipCodet" alignment="1" min="-2" pref="92" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="185" max="32767" attributes="0"/>
               </Group>

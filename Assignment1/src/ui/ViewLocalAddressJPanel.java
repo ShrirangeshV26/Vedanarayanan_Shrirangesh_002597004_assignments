@@ -52,6 +52,8 @@ public class ViewLocalAddressJPanel extends javax.swing.JPanel {
         fieldLocalCityt = new javax.swing.JTextField();
         fieldLocalZipCodet = new javax.swing.JTextField();
 
+        jPanel1.setBackground(new java.awt.Color(255, 102, 0));
+
         fieldLocalStreet.setText("Street ");
 
         fieldLocalUnit.setText("Unit Number");
@@ -71,12 +73,12 @@ public class ViewLocalAddressJPanel extends javax.swing.JPanel {
                     .addComponent(fieldLocalCity)
                     .addComponent(fieldLocalUnit)
                     .addComponent(fieldLocalStreet))
-                .addGap(157, 157, 157)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(fieldLocalStreett, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fieldLocalUnitt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fieldLocalCityt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fieldLocalZipCodet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(121, 121, 121)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(fieldLocalStreett, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                    .addComponent(fieldLocalUnitt)
+                    .addComponent(fieldLocalCityt)
+                    .addComponent(fieldLocalZipCodet, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(185, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(

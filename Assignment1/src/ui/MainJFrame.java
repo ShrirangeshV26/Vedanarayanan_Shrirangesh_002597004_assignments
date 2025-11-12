@@ -48,7 +48,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panelButtons.setBackground(new java.awt.Color(204, 51, 255));
+        panelButtons.setBackground(new java.awt.Color(255, 204, 153));
 
         btnCreatePerson.setText("Create Person");
         btnCreatePerson.addActionListener(new java.awt.event.ActionListener() {
@@ -114,17 +114,13 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGroup(panelButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCreatePerson)
                     .addComponent(btnCreateHomeAddress)
+                    .addComponent(btnViewPerson)
                     .addComponent(btnViewHomeAddress)
-                    .addComponent(btnViewPerson))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(panelButtonsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCreateLocalAddress)
                     .addComponent(btnViewLocalAddress)
-                    .addComponent(btnCreateBankAccount)
-                    .addComponent(btnViewBankAccount))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnViewBankAccount)
+                    .addComponent(btnCreateBankAccount))
+                .addGap(0, 9, Short.MAX_VALUE))
         );
         panelButtonsLayout.setVerticalGroup(
             panelButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
